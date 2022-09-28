@@ -22,6 +22,12 @@ public class Cat {
 	// changed mouth_x to better show cat with new dimensions set for eye.
 	private static final int MOUTH_Y = HEAD_DIMENSION/5 * 3;
 	
+	
+	private static final int EAR_Y = HEAD_DIMENSION - 10;
+	private static final int EAR_X = HEAD_DIMENSION - 10;
+	private static final int EAR_HEIGHT = 50;
+	private static final int EAR_WIDTH = 35;
+	//ADDED ear y and x
 	// draw will render the Cat on the Graphics object
 	public void draw(Graphics g, int catX, int catY)
 	{
@@ -48,6 +54,13 @@ public class Cat {
 		g2.setColor(Color.black);
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
-		g2.drawString("Meow", catX, catY+HEAD_DIMENSION+10);	
+		g2.drawString("Meow", catX, catY+HEAD_DIMENSION+10);
+		//added ears
+		g2.setColor(Color.pink);
+		x = catX - 10 ;
+		y = catY - 15 ;
+		g2.fillOval(x, y, EAR_WIDTH,EAR_HEIGHT);
+		x = catX +HEAD_DIMENSION - 20;
+		g2.fillOval(x, y, EAR_WIDTH,EAR_HEIGHT) ;
 	}
 }
