@@ -27,6 +27,11 @@ public class Cat {
 	private static final int EAR_X = HEAD_DIMENSION - 10;
 	private static final int EAR_HEIGHT = 50;
 	private static final int EAR_WIDTH = 10;
+	
+	private static final int LASAGNA_WIDTH = 70;
+	private static final int LASAGNA_HEIGHT = 60;
+	private static final int LASAGNA_X = 200;
+	private static final int LASAGNA_Y = 20;
 	//ADDED ear y and x
 	// draw will render the Cat on the Graphics object
 	public void draw(Graphics g, int catX, int catY)
@@ -62,5 +67,12 @@ public class Cat {
 		g2.fillRect(x + 10, y, EAR_WIDTH,EAR_HEIGHT);
 		x = catX +HEAD_DIMENSION - 20;
 		g2.fillRect(x+7, y, EAR_WIDTH,EAR_HEIGHT) ;
+		//Lasagna
+		g2.setColor(Color.red);
+		g2.fillRect(LASAGNA_X,LASAGNA_Y + 10,LASAGNA_WIDTH,60) ;
+		g2.setColor(Color.orange);
+		g2.fillRect(LASAGNA_X,30,LASAGNA_WIDTH,10) ;
+		g2.fillRect(LASAGNA_X,50,LASAGNA_WIDTH,10) ;
+		g2.fillRect(LASAGNA_X,70,LASAGNA_WIDTH,10) ;
 	}
 }
