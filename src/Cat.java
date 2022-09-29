@@ -26,7 +26,7 @@ public class Cat {
 	private static final int EAR_Y = HEAD_DIMENSION - 10;
 	private static final int EAR_X = HEAD_DIMENSION - 10;
 	private static final int EAR_HEIGHT = 50;
-	private static final int EAR_WIDTH = 35;
+	private static final int EAR_WIDTH = 10;
 	//ADDED ear y and x
 	// draw will render the Cat on the Graphics object
 	public void draw(Graphics g, int catX, int catY)
@@ -59,8 +59,8 @@ public class Cat {
 		g2.setColor(Color.orange);
 		x = catX - 10 ;
 		y = catY - 15 ;
-		g2.fillArc(x, y, EAR_WIDTH,EAR_HEIGHT, 1, 80);
+		g2.fillRect(x + 10, y, EAR_WIDTH,EAR_HEIGHT);
 		x = catX +HEAD_DIMENSION - 20;
-		g2.fillArc(x-25, y, EAR_WIDTH,EAR_HEIGHT, 1, 80) ;
+		g2.fillRect(x+7, y, EAR_WIDTH,EAR_HEIGHT) ;
 	}
 }
