@@ -35,11 +35,11 @@ public class Cat {
 		int x=catX;
 		int y=catY;
 		// Draw the head
-		g2.setColor(Color.black);
+		g2.setColor(Color.orange);
 		//changed head color to gray
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
 		// Draw the eyes
-		g2.setColor(Color.GRAY);
+		g2.setColor(Color.black);
 		//changed eye color to yellow
 		x = catX + EYE_X; 
 		y = catY + EYE_Y;
@@ -56,7 +56,7 @@ public class Cat {
 		// so it doesn't overlap the drawing
 		g2.drawString("meow meow meow meow", catX+MOUTH_WIDTH, catY+HEAD_DIMENSION+10);
 		//added ears
-		g2.setColor(Color.gray);
+		g2.setColor(Color.orange);
 		x = catX - 10 ;
 		y = catY - 15 ;
 		g2.fillArc(x, y, EAR_WIDTH,EAR_HEIGHT, 1, 80);
