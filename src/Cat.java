@@ -74,5 +74,9 @@ public class Cat {
 		g2.fillRect(LASAGNA_X,30,LASAGNA_WIDTH,10) ;
 		g2.fillRect(LASAGNA_X,50,LASAGNA_WIDTH,10) ;
 		g2.fillRect(LASAGNA_X,70,LASAGNA_WIDTH,10) ;
+		//Put a white circle over the lasagna because garfield took a bite
+		g2.setColor(Color.white);
+		g2.fillOval(LASAGNA_X-25,LASAGNA_Y, 50, 50);
+		
 	}
 }
