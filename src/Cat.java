@@ -13,12 +13,12 @@ public class Cat {
 	private static final int EYE_SEPARATION = HEAD_DIMENSION/3;
 	// pick eye dimensions
 	private static final int EYE_HEIGHT = 15;
-	private static final int EYE_WIDTH = 10;
+	private static final int EYE_WIDTH = 15;
 	// pick mouth height, width is based on head dimension
-	private static final int MOUTH_HEIGHT = 10;
+	private static final int MOUTH_HEIGHT = 20;
 	private static final int MOUTH_WIDTH = HEAD_DIMENSION/2;
 	// mouth starts about 40% from left edge of head
-	private static final int MOUTH_X = HEAD_DIMENSION/5 * 1;
+	private static final int MOUTH_X = HEAD_DIMENSION/4 * 1;
 	// changed mouth_x to better show cat with new dimensions set for eye.
 	private static final int MOUTH_Y = HEAD_DIMENSION/5 * 3;
 	
@@ -35,11 +35,11 @@ public class Cat {
 		int x=catX;
 		int y=catY;
 		// Draw the head
-		g2.setColor(Color.ORANGE);
+		g2.setColor(Color.black);
 		//changed head color to gray
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
 		// Draw the eyes
-		g2.setColor(Color.yellow);
+		g2.setColor(Color.GRAY);
 		//changed eye color to yellow
 		x = catX + EYE_X; 
 		y = catY + EYE_Y;
@@ -54,13 +54,13 @@ public class Cat {
 		g2.setColor(Color.black);
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
-		g2.drawString("Meow", catX, catY+HEAD_DIMENSION+10);
+		g2.drawString("Meow!!!!", catX+MOUTH_WIDTH, catY+HEAD_DIMENSION+10);
 		//added ears
-		g2.setColor(Color.pink);
+		g2.setColor(Color.gray);
 		x = catX - 10 ;
 		y = catY - 15 ;
-		g2.fillOval(x, y, EAR_WIDTH,EAR_HEIGHT);
+		g2.fillArc(x, y, EAR_WIDTH,EAR_HEIGHT, 1, 80);
 		x = catX +HEAD_DIMENSION - 20;
-		g2.fillOval(x, y, EAR_WIDTH,EAR_HEIGHT) ;
+		g2.fillArc(x-25, y, EAR_WIDTH,EAR_HEIGHT, 1, 80) ;
 	}
 }
